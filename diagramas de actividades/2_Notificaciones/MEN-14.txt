@@ -1,0 +1,19 @@
+@startuml
+start
+:Iniciar proceso de recordatorios para descansos;
+:¿Usuario desea recibir recordatorios de descanso?;
+
+    :Recopilar preferencias del usuario (duración, frecuencia);
+    :¿Usuario desea programar un recordatorio?;
+    if (Sí) then (sí)
+        :Seleccionar horarios para los descansos;
+        :Seleccionar método de notificación (alarma, app, etc.);
+        :Guardar recordatorio en el sistema;
+        :Mostrar mensaje de confirmación (recordatorio programado);
+    else (no)
+        :Fin del proceso;
+    endif
+
+
+stop
+@enduml

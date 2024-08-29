@@ -1,0 +1,29 @@
+@startuml
+start
+:Iniciar proceso de recuperación de contraseña;
+:Solicitar correo electrónico del usuario;
+:Validar correo electrónico;
+if (¿Correo válido?) then (sí)
+    :Enviar enlace de recuperación al correo;
+    :Mostrar mensaje de éxito (revisa tu correo);
+    :¿Usuario desea cambiar la contraseña?;
+    if (Sí) then (sí)
+        :Acceder al enlace de recuperación;
+        :Solicitar nueva contraseña;
+        :Confirmar nueva contraseña;
+        :¿Contraseñas coinciden?;
+        if (Sí) then (sí)
+            :Actualizar contraseña en la base de datos;
+            :Mostrar mensaje de éxito (contraseña actualizada);
+        else (no)
+            :Mostrar mensaje de error (contraseñas no coinciden);
+        endif
+    else (no)
+        :Fin del proceso;
+    endif
+else (no)
+    :Mostrar mensaje de error (correo no registrado);
+endif
+
+stop
+@enduml

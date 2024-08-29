@@ -1,0 +1,40 @@
+@startuml
+start
+:Iniciar gestión de determinación y prevención de fraudes;
+:Evaluar el riesgo de fraude en la organización;
+
+:Identificar áreas vulnerables a fraudes;
+:Recopilar datos históricos sobre incidentes de fraude;
+
+:Desarrollar políticas y procedimientos de prevención de fraude;
+:Implementar controles internos para mitigar riesgos;
+
+:¿Se requiere formación del personal sobre prevención de fraudes?;
+if (Sí) then (sí)
+    :Realizar capacitaciones periódicas sobre detección y prevención de fraudes;
+else (no)
+    :Continuar con la gestión actual;
+endif
+
+:Establecer un sistema de monitoreo para detectar actividades sospechosas;
+:Implementar tecnologías para la detección automática de fraudes;
+
+:¿Se detectan indicadores de fraude?;
+if (Sí) then (sí)
+    :Investigar incidentes sospechosos;
+    :¿Se confirma el fraude?;
+    if (Sí) then (sí)
+        :Activar protocolos de respuesta ante el fraude;
+        :Notificar a las partes interesadas y autoridades competentes;
+    else (no)
+        :Registrar el incidente y continuar monitoreando;
+    endif
+else (no)
+    :Realizar auditorías periódicas para evaluar la efectividad de las medidas;
+endif
+
+:Actualizar políticas y procedimientos según sea necesario;
+
+stop
+@enduml
+

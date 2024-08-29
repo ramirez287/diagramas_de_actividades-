@@ -1,0 +1,23 @@
+@startuml
+start
+:Iniciar proceso de seguimiento de objetivos;
+:¿Usuario tiene objetivos establecidos?;
+if (Sí) then (sí)
+    :Recopilar información sobre los objetivos (nombre, plazo, métricas);
+    :¿Usuario desea realizar un seguimiento periódico?;
+    if (Sí) then (sí)
+        :Establecer frecuencia de seguimiento (diaria, semanal, mensual);
+        :Registrar progreso en cada seguimiento;
+        :¿Progreso satisfactorio?;
+        if (Sí) then (sí)
+            :Mostrar mensaje de motivación;
+        else (no)
+            :Ofrecer sugerencias para mejorar el progreso;
+        endif
+    endif
+else (no)
+    :Mostrar mensaje de no disponibilidad de objetivos para seguimiento;
+endif
+
+stop
+@enduml

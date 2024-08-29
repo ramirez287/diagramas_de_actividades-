@@ -1,0 +1,15 @@
+
+@startuml
+
+start
+
+:Verificar si es hora de un recordatorio;
+    if (Es hora de un recordatorio) then (sí)
+        :Enviar notificación de hidratación al usuario;
+        :Registrar la notificación enviada;
+    else (no)
+        :Esperar un intervalo de tiempo;
+    endif
+
+stop
+@enduml

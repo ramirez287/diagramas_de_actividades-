@@ -1,0 +1,41 @@
+
+ @startuml
+start
+:Iniciar proceso de evaluación de salud mental;
+:¿Usuario desea realizar una evaluación?;
+if (Sí) then (sí)
+    :Recopilar información básica del usuario (nombre, edad, contacto);
+    :Presentar el propósito de la evaluación;
+    
+    :¿Usuario está de acuerdo con la evaluación?;
+    if (Sí) then (sí)
+        :Seleccionar tipo de evaluación (cuestionario, entrevista, etc.);
+        :Realizar la evaluación;
+        
+        :¿Usuario completó la evaluación?;
+        if (No) then (no)
+            :Mostrar mensaje para completar la evaluación;
+            repeat
+                :Recopilar respuestas restantes;
+            repeat while (No) is (No)
+        endif
+
+        :Analizar resultados de la evaluación;
+        :¿Resultados indican riesgo o preocupación?;
+        if (Sí) then (sí)
+            :Sugerir recursos y apoyo disponibles;
+            :Ofrecer opción para contactar a un profesional;
+        else (no)
+            :Mostrar mensaje positivo sobre el estado actual;
+        endif
+        
+    else (no)
+        :Mostrar mensaje de consentimiento no otorgado;
+    endif
+    
+else (no)
+    :Mostrar mensaje de no disponibilidad para realizar la evaluación;
+endif
+
+stop
+@enduml

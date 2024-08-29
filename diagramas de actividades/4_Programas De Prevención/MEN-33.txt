@@ -1,0 +1,41 @@
+@startuml
+start
+:Iniciar gestión de ejercicios de respiración muscular;
+:Identificar el objetivo del ejercicio (relajación, reducción de estrés, etc.);
+:Seleccionar un tipo de ejercicio de respiración muscular;
+
+if (Ejercicio seleccionado es respiración diafragmática?) then (sí)
+    :Instrucciones para la respiración diafragmática;
+    :Colocar una mano en el pecho y otra en el abdomen;
+    :Inhalar profundamente por la nariz, asegurándose que el abdomen se eleva;
+    :Exhalar lentamente por la boca, sintiendo cómo el abdomen desciende;
+
+else (no)
+    if (Ejercicio seleccionado es respiración con tensión muscular?) then (sí)
+        :Instrucciones para la respiración con tensión muscular;
+        :Tensar un grupo muscular específico al inhalar;
+        :Relajar ese grupo al exhalar;
+
+    else (no)
+        if (Ejercicio seleccionado es respiración progresiva?) then (sí)
+            :Instrucciones para la respiración progresiva;
+            :Inhalar contando hasta 4 mientras se tensa un grupo muscular;
+            :Exhalar contando hasta 4 relajando ese grupo;
+
+        else (no)
+            :Seleccionar otro tipo de ejercicio de respiración muscular;
+        endif
+    endif
+endif
+
+:Practicar el ejercicio durante 5-10 minutos;
+:¿Usuario desea repetir el ejercicio?;
+if (Sí) then (sí)
+    :Reiniciar el proceso de selección de ejercicio;
+else (no)
+    :Finalizar sesión de ejercicios de respiración muscular;
+endif
+
+stop
+@enduml
+

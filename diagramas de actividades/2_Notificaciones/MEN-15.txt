@@ -1,0 +1,21 @@
+@startuml
+start
+:Iniciar proceso de recordatorios para descansos oculares;
+:¿Usuario desea recibir recordatorios de descanso ocular?;
+if (Sí) then (sí)
+    :Recopilar preferencias del usuario (frecuencia, duración);
+    :¿Usuario desea programar un recordatorio?;
+    if (Sí) then (sí)
+        :Seleccionar horarios para los descansos oculares;
+        :Seleccionar método de notificación (alarma, app, etc.);
+        :Guardar recordatorio en el sistema;
+        :Mostrar mensaje de confirmación (recordatorio programado);
+    else (no)
+        :Fin del proceso;
+    endif
+else (no)
+    :Mostrar mensaje de no disponibilidad de recordatorios;
+endif
+
+stop
+@enduml

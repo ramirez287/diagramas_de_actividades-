@@ -1,0 +1,22 @@
+@startuml
+start
+:Iniciar proceso de sugerencias de actividad social;
+:¿Usuario desea recibir sugerencias?;
+if (Sí) then (sí)
+    :Recopilar preferencias del usuario;
+    :Generar lista de actividades sugeridas;
+    :¿Usuario desea programar un recordatorio?;
+    if (Sí) then (sí)
+        :Seleccionar fecha y hora para el recordatorio;
+        :Configurar método de notificación (correo, app, etc.);
+        :Guardar recordatorio en el sistema;
+        :Mostrar mensaje de confirmación (recordatorio programado);
+    else (no)
+        :Fin del proceso;
+    endif
+else (no)
+    :Mostrar mensaje de no disponibilidad de sugerencias;
+endif
+
+stop
+@enduml

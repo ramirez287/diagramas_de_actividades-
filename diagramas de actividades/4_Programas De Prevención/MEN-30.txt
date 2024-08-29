@@ -1,0 +1,42 @@
+@startuml
+start
+:Iniciar sesión de ejercicios de respiración;
+:Identificar el objetivo del ejercicio (relajación, concentración, etc.);
+:Seleccionar un tipo de ejercicio de respiración;
+
+if (Ejercicio seleccionado es respiración profunda?) then (sí)
+    :Instrucciones para la respiración profunda;
+    :Inhalar lentamente por la nariz contando hasta 4;
+    :Sostener la respiración contando hasta 4;
+    :Exhalar lentamente por la boca contando hasta 4;
+
+else (no)
+    if (Ejercicio seleccionado es respiración alterna?) then (sí)
+        :Instrucciones para la respiración alterna;
+        :Tapar una fosa nasal y inhalar por la otra;
+        :Alternar y exhalar por la fosa nasal opuesta;
+
+    else (no)
+        if (Ejercicio seleccionado es respiración cuadrada?) then (sí)
+            :Instrucciones para la respiración cuadrada;
+            :Inhalar contando hasta 4;
+            :Sostener la respiración contando hasta 4;
+            :Exhalar contando hasta 4;
+            :Sostener nuevamente contando hasta 4;
+
+        else (no)
+            :Seleccionar otro tipo de ejercicio de respiración;
+        endif
+    endif
+endif
+
+:Practicar el ejercicio durante 5-10 minutos;
+:¿Usuario desea repetir el ejercicio?;
+if (Sí) then (sí)
+    :Reiniciar el proceso de selección de ejercicio;
+else (no)
+    :Finalizar sesión de ejercicios de respiración;
+endif
+
+stop
+@enduml

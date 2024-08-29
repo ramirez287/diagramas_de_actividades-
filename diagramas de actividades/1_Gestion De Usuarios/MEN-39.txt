@@ -1,0 +1,23 @@
+@startuml
+start
+:Iniciar proceso de respaldo y recuperación de datos;
+:¿Usuario desea realizar un respaldo?;
+if (Sí) then (sí)
+    :Seleccionar datos a respaldar;
+    :Elegir método de respaldo (local, nube, etc.);
+    :Iniciar proceso de respaldo;
+    :Confirmar que el respaldo se completó exitosamente;
+else (no)
+    :¿Usuario desea recuperar datos?;
+    if (Sí) then (sí)
+        :Seleccionar fuente de recuperación (respaldo anterior);
+        :Elegir datos a recuperar;
+        :Iniciar proceso de recuperación;
+        :Confirmar que la recuperación se completó exitosamente;
+    else (no)
+        :Fin del proceso;
+    endif
+endif
+
+stop
+@enduml

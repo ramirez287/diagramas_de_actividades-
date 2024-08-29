@@ -1,0 +1,40 @@
+@startuml
+start
+:Iniciar proceso de autocuidado;
+:Identificar áreas de autocuidado (físico, emocional, social, etc.);
+:Seleccionar área de enfoque;
+
+if (Área seleccionada es física?) then (sí)
+    :Sugerir ejercicios físicos (caminatas, yoga, etc.);
+    :Recomendar hábitos alimenticios saludables;
+    :Recordar la importancia del descanso adecuado;
+
+else (no)
+    if (Área seleccionada es emocional?) then (sí)
+        :Sugerir prácticas de mindfulness o meditación;
+        :Recomendar llevar un diario emocional;
+        :Proponer actividades creativas (arte, música, etc.);
+
+    else (no)
+        if (Área seleccionada es social?) then (sí)
+            :Sugerir pasar tiempo con amigos y familiares;
+            :Recomendar unirse a grupos o comunidades;
+            :Fomentar la comunicación abierta y honesta;
+
+        else (no)
+            :Seleccionar otra área de autocuidado;
+        endif
+    endif
+endif
+
+:Registrar actividades recomendadas;
+:¿Usuario desea más consejos?;
+if (Sí) then (sí)
+    :Ofrecer más recursos y recomendaciones personalizadas;
+else (no)
+    :Finalizar proceso de autocuidado;
+endif
+
+stop
+@enduml
+

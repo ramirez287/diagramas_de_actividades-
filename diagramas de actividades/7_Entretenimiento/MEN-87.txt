@@ -1,0 +1,41 @@
+@startuml
+start
+:Iniciar el proceso de gestión de listas de reproducción personalizadas;
+:Recopilar información del usuario (géneros, artistas, estados de ánimo, etc.);
+
+:Analizar preferencias del usuario;
+:¿Existen listas de reproducción previas?;
+if (Sí) then (sí)
+    :Revisar listas anteriores y su rendimiento;
+else (no)
+    :Crear nuevas listas desde cero;
+endif
+
+:Generar una lista de canciones sugeridas;
+:¿Se requiere aplicar filtros adicionales?;
+if (Sí) then (sí)
+    :Aplicar filtros (duración, popularidad, etc.);
+endif
+
+:Presentar la lista de reproducción al usuario;
+:¿El usuario acepta la lista?;
+if (Sí) then (sí)
+    :Guardar la lista de reproducción personalizada;
+else (no)
+    :Recopilar feedback sobre cambios deseados;
+    :Ajustar la lista según el feedback recibido;
+endif
+
+:Permitir al usuario añadir o eliminar canciones de la lista;
+:Actualizar la lista en tiempo real;
+
+:Monitorear la interacción del usuario con la lista de reproducción;
+:¿Se requieren mejoras en futuras listas?;
+if (Sí) then (sí)
+    :Registrar el feedback y ajustar el proceso de creación;
+else (no)
+    :Continuar con el monitoreo y mantenimiento actual;
+endif
+
+stop
+@enduml

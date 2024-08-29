@@ -1,0 +1,22 @@
+@startuml
+start
+:Iniciar gestión de frases motivadoras;
+:Recopilar frases motivadoras de diferentes fuentes;
+:Clasificar frases por categorías (superación, amor propio, éxito, etc.);
+
+:¿Usuario desea recibir una frase motivadora?;
+
+        :Elegir una frase aleatoria de la categoría seleccionada;
+        :Mostrar frase motivadora al usuario;
+
+        :¿Usuario desea guardar esta frase?;
+        if (Sí) then (sí)
+            :Agregar frase a la lista de favoritas;
+        else (no)       endif
+    
+else (no)
+    :Mostrar mensaje de que no hay nuevas frases disponibles;
+endif
+
+stop
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+start
+:Iniciar gestión de autenticación y autorización;
+:Evaluar requisitos de acceso de los usuarios;
+
+if (¿Se requiere autenticación?) then (sí)
+    :Seleccionar método de autenticación (contraseña, biometría, etc.);
+    :Implementar el método de autenticación seleccionado;
+    :Configurar políticas de contraseña (longitud, complejidad, caducidad);
+else (no)
+    :Proceder a la autorización directamente;
+endif
+
+:Definir roles y permisos de usuarios;
+:Asignar roles a los usuarios según sus necesidades;
+
+:Implementar controles de acceso basados en roles (RBAC);
+:¿Requiere el sistema revisión de permisos periódica?;
+if (Sí) then (sí)
+    :Establecer un calendario para la revisión de permisos;
+else (no)
+    :Continuar con la gestión actual;
+endif
+
+:Monitorear accesos y actividades sospechosas;
+:¿Se detectan accesos no autorizados?;
+if (Sí) then (sí)
+    :Activar protocolos de respuesta ante incidentes;
+else (no)
+    :Realizar auditorías periódicas de autenticación y autorización;
+endif
+
+:Actualizar políticas y procedimientos según sea necesario;
+
+stop
+@enduml
+

@@ -1,0 +1,22 @@
+@startuml
+start
+:Iniciar proceso de recordatorios para calendario de citas;
+:¿Usuario desea agregar una nueva cita?;
+if (Sí) then (sí)
+    :Recopilar detalles de la cita (fecha, hora, descripción);
+    :¿Usuario desea programar un recordatorio?;
+    if (Sí) then (sí)
+        :Seleccionar tiempo antes de la cita para el recordatorio (ej. 10 minutos, 1 hora);
+        :Seleccionar método de notificación (alarma, correo, app, etc.);
+        :Guardar cita y recordatorio en el sistema;
+        :Mostrar mensaje de confirmación (cita y recordatorio programados);
+    else (no)
+        :Guardar solo la cita en el sistema;
+        :Mostrar mensaje de confirmación (cita guardada sin recordatorio);
+    endif
+else (no)
+    :Mostrar mensaje de no disponibilidad para agregar citas;
+endif
+
+stop
+@enduml

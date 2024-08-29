@@ -1,0 +1,38 @@
+@startuml
+start
+:Iniciar el proceso de gestión de búsqueda de sugerencias de películas;
+:Recopilar datos del usuario (géneros favoritos, actores, etc.);
+
+:Analizar preferencias del usuario;
+:¿Hay un algoritmo de recomendación disponible?;
+if (Sí) then (sí)
+    :Utilizar algoritmo existente para generar sugerencias;
+else (no)
+    :Desarrollar un nuevo algoritmo de recomendación;
+endif
+
+:Generar lista de películas sugeridas;
+:¿Se requiere filtrar las sugerencias?;
+if (Sí) then (sí)
+    :Aplicar filtros adicionales (año, calificación, etc.);
+endif
+
+:Presentar las sugerencias al usuario;
+:¿El usuario está satisfecho con las sugerencias?;
+if (Sí) then (sí)
+    :Registrar feedback positivo y recomendaciones adicionales;
+else (no)
+    :Recopilar feedback sobre las preferencias no satisfechas;
+    :Ajustar el algoritmo o los filtros según el feedback;
+endif
+
+:Monitorear la interacción del usuario con las sugerencias;
+:¿Se requieren mejoras en el sistema de recomendaciones?;
+if (Sí) then (sí)
+    :Actualizar el algoritmo y realizar ajustes necesarios;
+else (no)
+    :Continuar monitoreando la efectividad del sistema;
+endif
+
+stop
+@enduml

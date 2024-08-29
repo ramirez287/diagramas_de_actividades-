@@ -1,0 +1,32 @@
+@startuml
+start
+:Iniciar proceso de registro;
+:Solicitar información personal (nombre, correo, etc.);
+:Solicitar información profesional (especialidad, número de licencia, etc.);
+:¿Usuario desea agregar una foto de perfil?;
+if (Sí) then
+    :Solicitar foto de perfil;
+    :Validar formato de la foto;
+else (no)
+    :Continuar sin foto de perfil;
+endif
+
+:¿Usuario desea agregar una biografía?;
+if (Sí) then
+    :Solicitar biografía profesional;
+else (no)
+    :Continuar sin biografía;
+endif
+
+:Revisar toda la información ingresada;
+:¿Información correcta?;
+if (Sí) then
+    :Guardar registro en la base de datos;
+    :Enviar confirmación por correo electrónico;
+    :Mostrar mensaje de éxito;
+else (no)
+    :Permitir editar información;
+endif
+
+stop
+@enduml

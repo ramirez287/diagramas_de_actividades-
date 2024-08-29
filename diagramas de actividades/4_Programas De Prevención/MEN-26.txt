@@ -1,0 +1,14 @@
+@startuml
+(*) --> "Verificar si es hora de un recordatorio"
+"Verificar si es hora de un recordatorio" --> "Es hora de un recordatorio?"
+if "Es hora y fecha antes para del  recordatorio?" then
+    -->[Si] "Generar notificación de cita"
+    "Generar notificación de cita" --> "Enviar notificación al usuario"
+  
+else
+    -->[No] "Esperar hasta la próxima verificación"
+
+
+endif
+
+@enduml

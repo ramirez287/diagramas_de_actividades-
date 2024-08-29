@@ -1,0 +1,40 @@
+@startuml
+start
+:Iniciar gestión de roles y permisos granulares;
+:Evaluar necesidades de acceso en la organización;
+
+:Identificar recursos y sistemas que requieren control de acceso;
+
+:Definir roles específicos basados en las funciones del usuario;
+:Crear un listado de permisos necesarios para cada rol;
+
+:¿Se requiere personalización de permisos para usuarios específicos?;
+if (Sí) then (sí)
+    :Establecer un proceso para solicitar permisos adicionales;
+    :Revisar y aprobar solicitudes de permisos personalizados;
+else (no)
+    :Asignar permisos estándar a los roles definidos;
+endif
+
+:Implementar controles de acceso basados en roles (RBAC);
+:Configurar el sistema para aplicar permisos granulares;
+
+:¿Se requiere revisión periódica de roles y permisos?;
+if (Sí) then (sí)
+    :Establecer un calendario para la revisión de roles y permisos;
+else (no)
+    :Continuar con la gestión actual;
+endif
+
+:Monitorear el uso de roles y permisos;
+:¿Se detectan accesos inusuales o no autorizados?;
+if (Sí) then (sí)
+    :Activar protocolos de respuesta ante incidentes;
+else (no)
+    :Realizar auditorías periódicas de roles y permisos;
+endif
+
+:Actualizar roles y permisos según sea necesario;
+
+stop
+@enduml

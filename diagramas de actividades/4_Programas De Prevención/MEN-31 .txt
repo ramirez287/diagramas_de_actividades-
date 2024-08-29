@@ -1,0 +1,12 @@
+@startuml
+start
+:Verificar si es hora de un nuevo consejo;
+if (Es hora) then (SI)
+    :Generar consejo de autocuidado;
+    
+    :Enviar consejo al usuario;
+else (NO)
+    :Esperar hasta el próximo intervalo;
+endif
+stop
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+start
+:Iniciar proceso de login;
+if (Ya tienes una cuenta ?) then (sí)
+    else (no)
+        :redireccionar al register ;
+        :crear cuenta ;
+    endif
+:Solicitar credenciales (usuario y contraseña);
+:Validar credenciales;
+if (¿Credenciales válidas?) then (sí)
+    :Acceder a la aplicación;
+    :Mostrar pantalla principal;
+else (no)
+    :Mostrar mensaje de error;
+    :¿Usuario desea intentar nuevamente?;
+    if (Sí) then (sí)
+        :Repetir solicitud de credenciales;
+    else (no)
+        :Salir del proceso de login;
+    endif
+endif
+stop
+@enduml

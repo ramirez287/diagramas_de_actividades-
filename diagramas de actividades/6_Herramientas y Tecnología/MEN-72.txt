@@ -1,0 +1,45 @@
+@startuml
+start
+:Iniciar gestión de personalización del tratamiento;
+:Identificar necesidades y preferencias del usuario;
+
+:Recopilar datos relevantes (historial, preferencias, etc.);
+:Analizar datos para identificar patrones y tendencias;
+
+:Definir objetivos de personalización;
+:Desarrollar un plan de tratamiento personalizado;
+
+:¿Se requiere colaboración con otros profesionales?;
+if (Sí) then (sí)
+    :Coordinar con otros especialistas (médicos, terapeutas, etc.);
+else (no)
+    :Continuar con el desarrollo del plan;
+endif
+
+:Presentar el plan de tratamiento personalizado al usuario;
+:¿El usuario acepta el plan?;
+if (Sí) then (sí)
+    :Implementar el tratamiento personalizado;
+else (no)
+    :Revisar el plan según feedback del usuario;
+    :Volver a presentar el plan revisado;
+endif
+
+:Monitorear el progreso del tratamiento;
+:¿Se requieren ajustes en el tratamiento?;
+if (Sí) then (sí)
+    :Realizar ajustes según la evolución del usuario;
+else (no)
+    :Continuar con el tratamiento actual;
+endif
+
+:Evaluar resultados y satisfacción del usuario;
+:¿El tratamiento ha sido efectivo?;
+if (Sí) then (sí)
+    :Registrar resultados positivos y feedback para futuras referencias;
+else (no)
+    :Revisar y modificar el enfoque de tratamiento;
+endif
+
+stop
+@enduml

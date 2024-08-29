@@ -1,0 +1,29 @@
+@startuml
+start
+:Iniciar proceso de programación de citas para personas con discapacidad;
+:¿Usuario desea programar una cita?;
+if (Sí) then (sí)
+    :Recopilar información del usuario (nombre, contacto, tipo de cita);
+    :¿Necesita asistencia adicional?;
+    if (Sí) then (sí)
+        :Registrar tipo de asistencia requerida (acceso, transporte, etc.);
+    else (no)
+        :Continuar sin asistencia adicional;
+    endif
+    
+    :Seleccionar fecha y hora para la cita;
+    :¿Es accesible el lugar de la cita?;
+    if (No) then (no)
+        :Ofrecer alternativas accesibles;
+        :Seleccionar nueva fecha y hora;
+    endif
+
+    :Confirmar detalles de la cita;
+    :Enviar notificación de confirmación al usuario;
+else (no)
+    :Mostrar mensaje de no disponibilidad para programar citas;
+endif
+
+stop
+@enduml
+

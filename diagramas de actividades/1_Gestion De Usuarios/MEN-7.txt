@@ -1,0 +1,30 @@
+@startuml
+start
+:Iniciar proceso de creación de perfil;
+:Solicitar información básica (nombre, correo, etc.);
+:¿Usuario desea agregar una foto de perfil?;
+if (Sí) then
+    :Solicitar foto de perfil;
+    :Validar formato de la foto;
+else (no)
+    :Continuar sin foto de perfil;
+endif
+
+:¿Usuario desea agregar una descripción?;
+if (Sí) then
+    :Solicitar descripción personal;
+else (no)
+    :Continuar sin descripción;
+endif
+
+:Revisar toda la información ingresada;
+:¿Información correcta?;
+if (Sí) then
+    :Guardar perfil en la base de datos;
+    :Mostrar mensaje de éxito;
+else (no)
+    :Permitir editar información;
+endif
+
+stop
+@enduml

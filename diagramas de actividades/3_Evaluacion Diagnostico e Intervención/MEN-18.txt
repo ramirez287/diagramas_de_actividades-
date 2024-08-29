@@ -1,0 +1,31 @@
+@startuml
+start
+:Iniciar proceso de autoevaluación de salud mental;
+:¿Usuario desea realizar el cuestionario?;
+if (Sí) then (sí)
+    :Presentar instrucciones para completar el cuestionario;
+    :Recopilar respuestas a las preguntas del cuestionario;
+    :¿Usuario completó todas las preguntas?;
+    if (No) then (no)
+        :Mostrar mensaje de recordatorio para completar el cuestionario;
+        repeat
+            :Recopilar respuestas a las preguntas restantes;
+        repeat while (No) is (No)
+    endif
+
+    :Analizar respuestas del cuestionario;
+    :Evaluar estado de salud mental basado en respuestas;
+    :¿Resultado indica necesidad de apoyo?;
+    if (Sí) then (sí)
+        :Sugerir recursos y apoyo disponibles;
+        :Ofrecer opción para contactar a un profesional;
+    else (no)
+        :Mostrar mensaje positivo sobre el estado actual;
+    endif
+    
+else (no)
+    :Mostrar mensaje de no disponibilidad para realizar el cuestionario;
+endif
+
+stop
+@enduml

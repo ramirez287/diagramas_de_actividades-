@@ -1,0 +1,19 @@
+@startuml
+start
+:Iniciar proceso de recordatorios para ejercicios de relajación;
+    :Recopilar preferencias del usuario (tipo de ejercicio, duración);
+    :Generar lista de ejercicios de relajación sugeridos;
+    :¿Usuario desea programar un recordatorio?;
+    if (Sí) then (sí)
+        :Seleccionar frecuencia del recordatorio (diario, semanal);
+        :Seleccionar hora para el recordatorio;
+        :Configurar método de notificación (correo, app, etc.);
+        :Guardar recordatorio en el sistema;
+        :Mostrar mensaje de confirmación (recordatorio programado);
+    else (no)
+        :Fin del proceso;
+    endif
+
+
+stop
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+start
+:Iniciar el proceso de soporte en múltiples dispositivos;
+:Identificar dispositivos a soportar (móvil, tablet, PC, etc.);
+
+:Definir requisitos y especificaciones para cada dispositivo;
+:Desarrollar una arquitectura flexible y adaptable;
+
+:Crear versiones específicas para cada tipo de dispositivo;
+:¿Se necesita un diseño responsive?;
+if (Sí) then (sí)
+    :Implementar diseño responsive para adaptarse a diferentes tamaños de pantalla;
+else (no)
+    :Desarrollar interfaces específicas para cada dispositivo;
+endif
+
+:Realizar pruebas de funcionalidad en cada dispositivo;
+:¿Se detectan errores o problemas de usabilidad?;
+if (Sí) then (sí)
+    :Corregir errores y mejorar la usabilidad;
+else (no)
+    :Continuar con la implementación;
+endif
+
+:Establecer un sistema de soporte técnico accesible desde todos los dispositivos;
+:Crear documentación y recursos de ayuda específicos para cada dispositivo;
+
+:Monitorear el rendimiento y la satisfacción del usuario en diferentes dispositivos;
+:¿Se requieren actualizaciones o mejoras?;
+if (Sí) then (sí)
+    :Implementar mejoras basadas en el feedback recibido;
+else (no)
+    :Continuar monitoreando el rendimiento;
+endif
+
+stop
+@enduml

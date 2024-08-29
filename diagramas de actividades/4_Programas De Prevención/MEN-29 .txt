@@ -1,0 +1,14 @@
+@startuml
+title Gestión de Consejos de Postura
+
+start
+:Verificar si es hora de un nuevo consejo;
+if (Es hora) then (si)
+    :Generar consejo de postura;
+    :Enviar consejo al usuario;
+else (no)
+    :Esperar hasta el próximo intervalo;
+endif
+stop
+@enduml
+

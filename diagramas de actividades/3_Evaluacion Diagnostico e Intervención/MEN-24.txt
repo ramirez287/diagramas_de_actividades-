@@ -1,0 +1,41 @@
+@startuml
+start
+:Iniciar gestión del cuestionario de bienestar emocional;
+:¿Usuario desea acceder al cuestionario?;
+if (Sí) then (sí)
+    :Presentar instrucciones sobre cómo completar el cuestionario;
+    :Recopilar información básica del usuario (nombre, edad, etc.);
+    
+    :¿Usuario está listo para comenzar?;
+    if (Sí) then (sí)
+        :Presentar preguntas del cuestionario;
+        
+        :¿Usuario completó todas las preguntas?;
+        if (No) then (no)
+            :Mostrar mensaje de recordatorio para completar el cuestionario;
+            repeat
+                :Recopilar respuestas a las preguntas restantes;
+            repeat while (No) is (No)
+        endif
+
+        :Analizar respuestas del cuestionario;
+        :Evaluar nivel de bienestar emocional basado en respuestas;
+        
+        :¿Resultado indica necesidad de mejorar el bienestar?;
+        if (Sí) then (sí)
+            :Sugerir actividades o recursos para mejorar el bienestar;
+            :Ofrecer opción para seguimiento o apoyo adicional;
+        else (no)
+            :Mostrar mensaje positivo sobre el bienestar actual;
+        endif
+        
+    else (no)
+        :Mostrar mensaje de no disponibilidad para comenzar el cuestionario;
+    endif
+    
+else (no)
+    :Mostrar mensaje de no disponibilidad para acceder al cuestionario;
+endif
+
+stop
+@enduml
